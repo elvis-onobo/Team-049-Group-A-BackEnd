@@ -1,0 +1,38 @@
+{
+  "name": "emed9ja",
+  "version": "1.0.0",
+  "description": "A medical database built to save lives",
+  "scripts": {
+    "start": "/usr/bin/node ./bin/www",
+    "start-dev": "nodemon ./bin/www",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Team-049-Group-A",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BuildForSDGCohort2/Team-049-Group-A-BackEnd.git"
+  },
+  "bugs": {
+    "url": "https://github.com/BuildForSDGCohort2/Team-049-Group-A-BackEnd/issues"
+  },
+  "homepage": "https://github.com/BuildForSDGCohort2/Team-049-Group-A-BackEnd#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "knex": "^0.21.5",
+    "mysql": "^2.18.1",
+    "objection": "^2.2.3",
+    "async": "^3.2.0",
+    "bluebird": "^3.7.2",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "debug": "^4.1.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "expect.js": "^0.3.1",
+    "mocha": "^3.5.3",
+    "nodemon": "^2.0.4"
+  }
+}
