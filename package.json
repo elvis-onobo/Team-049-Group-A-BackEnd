@@ -5,7 +5,7 @@
   "scripts": {
     "start": "/usr/bin/node ./bin/www",
     "start-dev": "nodemon ./bin/www",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "author": "Team-049-Group-A",
   "license": "ISC",
@@ -32,6 +32,7 @@
   },
   "devDependencies": {
     "expect.js": "^0.3.1",
+    "jest": "^26.4.2",
     "mocha": "^3.5.3",
     "nodemon": "^2.0.4"
   }
