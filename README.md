@@ -41,4 +41,4 @@ npm start
 
 ### Database Design
 
-![Database Design](https://github.com/BuildForSDGCohort2/Team-049-Group-A-BackEnd/blob/master/database-design.jpeg?raw=true)
+![Database Design](database-design.jpeg)
