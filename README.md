@@ -36,7 +36,7 @@ sudo npm install knex -g
 7. Start the app
 
 ```
-npm start
+node bin/www
 ```
 
 ### Database Design
