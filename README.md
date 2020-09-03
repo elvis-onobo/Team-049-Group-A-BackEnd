@@ -16,22 +16,29 @@ DB_PASSWORD=your-chosen-db-password
 DATABASE=emed
 ```
 
-3. Create a database named ___emed___ in MySQL
+3. Create a database named **_emed_** in MySQL
 
 4. Install the modules
+
 ```
 npm install
 ```
 
 5. Install the Knex CLI using NPM to help you run migration commands on your PC.
+
 ```
 sudo npm install knex -g
 ```
 
-6. Run  ```knex migrate:latest``` to add the lates migration(s) tables in your database.
-___NB: for help with Knex commands, just type "knex" in your CMD tor Terminal__
+6. Run `knex migrate:latest` to add the lates migration(s) tables in your database.
+   **\_NB: for help with Knex commands, just type "knex" in your CMD tor Terminal**
 
 7. Start the app
+
 ```
 npm start
 ```
+
+### Database Design
+
+![Database Design](https://github.com/BuildForSDGCohort2/Team-049-Group-A-BackEnd/blob/master/database-design.jpeg?raw=true)
