@@ -14,6 +14,8 @@ DB_HOST=localhost
 DB_USER=root
 DB_PASSWORD=your-chosen-db-password
 DATABASE=emed
+ACCESS_TOKEN_SECRET=******
+REFRESH_TOKEN_SECRET=******
 ```
 
 3. Create a database named **_emed_** in MySQL
