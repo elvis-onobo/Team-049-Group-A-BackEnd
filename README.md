@@ -35,7 +35,9 @@ sudo npm install knex -g
 6. Run `knex migrate:latest` to add the lates migration(s) tables in your database.
    **NB: for help with Knex commands, just type "knex" in your CMD tor Terminal**
 
-7. Start the app
+7. ### Start the app:
+
+**For Linux Systems**
 
 ```
 node bin/www
@@ -44,3 +46,8 @@ node bin/www
 ### Database Design
 
 ![Database Design](database-design.jpeg)
+**For Windows and Mac Systems**
+
+```
+node ./bin/www
+```
