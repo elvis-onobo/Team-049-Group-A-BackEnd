@@ -5,7 +5,7 @@
   "scripts": {
     "start": "/usr/bin/node ./bin/www",
     "start-dev": "nodemon ./bin/www",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "author": "Team-049-Group-A",
   "license": "ISC",
@@ -18,20 +18,24 @@
   },
   "homepage": "https://github.com/BuildForSDGCohort2/Team-049-Group-A-BackEnd#readme",
   "dependencies": {
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "knex": "^0.21.5",
-    "mysql": "^2.18.1",
-    "objection": "^2.2.3",
     "async": "^3.2.0",
+    "bcrypt": "^5.0.0",
     "bluebird": "^3.7.2",
     "body-parser": "^1.19.0",
     "cookie-parser": "^1.4.5",
     "debug": "^4.1.1",
-    "morgan": "^1.10.0"
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^0.21.5",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "objection": "^2.2.3",
+    "randomstring": "^1.1.5"
   },
   "devDependencies": {
     "expect.js": "^0.3.1",
+    "jest": "^26.4.2",
     "mocha": "^3.5.3",
     "nodemon": "^2.0.4"
   }

@@ -14,30 +14,40 @@ DB_HOST=localhost
 DB_USER=root
 DB_PASSWORD=your-chosen-db-password
 DATABASE=emed
+ACCESS_TOKEN_SECRET=******
+REFRESH_TOKEN_SECRET=******
 ```
 
-3. Create a database named ___emed___ in MySQL
+3. Create a database named **_emed_** in MySQL
 
 4. Install the modules
+
 ```
 npm install
 ```
 
 5. Install the Knex CLI using NPM to help you run migration commands on your PC.
+
 ```
 sudo npm install knex -g
 ```
 
-6. Run  ```knex migrate:latest``` to add the lates migration(s) tables in your database.
-___NB: for help with Knex commands, just type "knex" in your CMD tor Terminal__
+6. Run `knex migrate:latest` to add the lates migration(s) tables in your database.
+   **NB: for help with Knex commands, just type "knex" in your CMD tor Terminal**
 
 7. ### Start the app:
 
-__For Linux Systems__
+**For Linux Systems**
+
 ```
-npm start
+node bin/www
 ```
-__For Windows and Mac Systems__
+
+### Database Design
+
+![Database Design](database-design.jpeg)
+**For Windows and Mac Systems**
+
 ```
 node ./bin/www
 ```
