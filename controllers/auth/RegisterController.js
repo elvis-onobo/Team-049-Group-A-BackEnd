@@ -5,6 +5,10 @@ const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 const env = require("dotenv").config();
 const randomstring = require("randomstring");
+var mailgun = require("mailgun-js")({
+  apiKey: process.env.MAILGUN_API_KEY,
+  domain: process.env.MAILGUN_DOMAIN,
+});
 
 // models
 const User = require("../../models/User");
@@ -27,18 +31,35 @@ exports.registerUser = async (req, res) => {
       key,
     });
 
-    const token = jwt.sign(
-      { user: userData },
-      process.env.ACCESS_TOKEN_SECRET,
-      {
-        expiresIn: process.env.JWT_EXP,
-      }
-    );
+    const data = {
+      from: `${process.env.FROM_NAME} <${process.env.FROM_MAIL}>`,
+      to: userData.email,
+      subject: "Please verify your email",
+      text: "Click the following link to verify your email!",
+    };
 
-    res.status(201).json({
-      status: "success",
-      message: "You have been registered",
-      token,
+    mailgun.messages().send(data, function (error, body) {
+      if (error) {
+        res.status(201).json({
+          status: "failure",
+          message:
+            "You have been registered but we failed to send you an email",
+        });
+      } else {
+        const token = jwt.sign(
+          { user: userData },
+          process.env.ACCESS_TOKEN_SECRET,
+          {
+            expiresIn: process.env.JWT_EXP,
+          }
+        );
+
+        res.status(201).json({
+          status: "success",
+          message: "You have been registered",
+          token,
+        });
+      }
     });
   } catch (errorCreatingUser) {
     console.log("There has been an error", errorCreatingUser);
