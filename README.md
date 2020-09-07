@@ -45,7 +45,7 @@ node bin/www
 
 ### Database Design
 
-![Database Design](database-design.jpeg)
+![Database Design](database-design.png)
 **For Windows and Mac Systems**
 
 ```
