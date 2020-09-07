@@ -35,11 +35,15 @@ exports.registerUser = async (req, res) => {
       from: `${process.env.FROM_NAME} <${process.env.FROM_MAIL}>`,
       to: userData.email,
       subject: "Please verify your email",
-      text: "Click the following link to verify your email!",
+      text: `Click the following link to verify your email!: 
+      <a href="${req.hostname / userData.key}">Here</a> or click here ${
+        req.hostname / userData.key
+      }`,
     };
 
-    mailgun.messages().send(data, function (error, body) {
-      if (error) {
+    mailgun.messages().send(data, function (errorSendingMail, body) {
+      if (errorSendingMail) {
+        console.log("There was an error sending mail", errorSendingMail);
         res.status(201).json({
           status: "failure",
           message:
