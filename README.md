@@ -51,4 +51,4 @@ node ./bin/www
 
 ### Database Design
 
-![Database Design](database-design.png)
+![Database Design](database-design.PNG)
