@@ -43,11 +43,12 @@ sudo npm install knex -g
 node bin/www
 ```
 
-### Database Design
-
-![Database Design](database-design.png)
 **For Windows and Mac Systems**
 
 ```
 node ./bin/www
 ```
+
+### Database Design
+
+![Database Design](database-design.png)
