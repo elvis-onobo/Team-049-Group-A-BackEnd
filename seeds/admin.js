@@ -1,10 +1,16 @@
+const bcrypt = require("bcrypt");
+
+const hashedPassword =
+  "$2b$10$9WXXOLxh3CcmzDw6HZlG0efOts2yOogvOOWNPJ7Fu9OLLPnm/ARg.";
+// Password === 1234Admin
+
 exports.seed = function (knex) {
   // Deletes ALL existing entries
-  return knex("table_name")
+  return knex("admin")
     .del()
     .then(function () {
       // Inserts seed entries
-      return knex("table_name").insert([
+      return knex("admin").insert([
         {
           id: 1,
           firstname: "Super",
@@ -15,7 +21,7 @@ exports.seed = function (knex) {
           next_of_kin: "Sub Admin",
           id_type: "NIN",
           id_number: "NIN124545646",
-          password: "1234Admin",
+          password: hashedPassword,
         },
       ]);
     });
